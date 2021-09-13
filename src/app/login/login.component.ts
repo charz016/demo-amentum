@@ -22,6 +22,7 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit() {
+    if (this.form.invalid) return;
     this.authServ.login();
     this.form.reset();
   }
